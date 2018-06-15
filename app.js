@@ -1,8 +1,11 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
 app.get('/', function(req, res){
-  res.send('this is the home page');
+  //res.send('this is the home page');
+  res.sendFile(path.join(__dirname + '/index.html'));
+
 });
 
 app.listen(3000);
